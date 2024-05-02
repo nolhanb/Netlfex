@@ -1,0 +1,108 @@
+/* Upper Block */
+.details .upper-block {
+  background: #000; /* Couleur d'arrière-plan sombre utilisée par Netflix */
+  color: #fff; /* Couleur du texte en blanc pour contraste */
+  padding: 30px 0;
+}
+
+/* Middle Block */
+.details .middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+/* Title and Details */
+.details .title-ul {
+  width: 50%;
+}
+
+.details .facts,
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: #333; /* Couleur de fond sombre pour les détails */
+  color: #fff; /* Couleur du texte en blanc pour contraste */
+}
+
+.lil {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-style: italic;
+  color: #ccc; /* Couleur du texte pour les détails supplémentaires */
+}
+
+.details .img-film {
+  height: 300px;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.details .resume {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.details p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* Slider */
+h2.underlined {
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.slider-container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.slider-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .details .title-ul {
+    width: 80%;
+  }
+
+  .details .middle {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details .img-film {
+    height: 200px;
+    width: 100%;
+  }
+
+  .slider-container img {
+    width: 150px;
+    height: 225px;
+  }
+}
+.movie-info h2:visited {
+  color: #fff; /* Couleur du texte pour les liens visités */
+}
+
