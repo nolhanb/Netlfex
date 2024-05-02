@@ -1,0 +1,7 @@
+Le but de notre projet est d'intégrer grâce à notre clé API les données de milliers de films dans notre project Netflix sur React, dans lequel il est possible de chercher un film dans la barre de recherche ainsi que voir tous les détails relatifs au film choisi tout en béneficiant d'un confort visuel.
+
+Voici comment faire pour l'installer : 
+
+Télecharger le fichier "NETFLEX"
+Puis lancer le terminal pour ouvrir l'emplacement du fichier.
+Lancer le programme avec la commande "npm start".
