@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./style/styles.css";
 import Détails from "./pages/FilmsDetails";
 import Home from "./pages/Home";
-import Entrance from "./pages/Entrance"
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <Routes>
         <Route path="/:id" element={<Détails />}></Route>
         <Route path="/" element={<Home />} />
-        <Route path="/a" element={<Entrance/>}/>
       </Routes>
     </BrowserRouter>
   );

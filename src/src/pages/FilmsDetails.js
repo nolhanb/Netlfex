@@ -92,7 +92,7 @@ function Détails() {
               <ShowDate date={date}></ShowDate>{" "}
             </li>
             <li>
-              <span className="bold-style">Original Version : </span>{" "}
+              <span className="bold-style">Original language : </span>{" "}
               {language}{" "}
             </li>
             <li>
