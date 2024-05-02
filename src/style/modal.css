@@ -1,0 +1,50 @@
+.Infos-modal {
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 30%;
+  width: 100%;
+  outline: 1px solid;
+}
+.Infos-modal ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.Infos-modal img {
+  height: 80%;
+  object-fit: contain;
+  display: inline-block;
+}
+.Infos-modal h3 {
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+}
+.Infos-modal span {
+  color: rgb(51, 51, 51);
+  font-style: italic;
+}
+.Infos-modal li {
+  font-weight: 300;
+}
+.Infos-modal p {
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .Infos-modal p,
+  span,
+  h3 {
+    font-size: 80%;
+  }
+  .Infos-modal {
+    width: 100%;
+    height: 25%;
+  }
+}

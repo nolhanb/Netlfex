@@ -1,0 +1,36 @@
+/* Styles du header */
+header {
+    background: #000; /* Couleur de fond du header */
+    padding: 20px 0;
+  }
+  
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: #e50914; /* Couleur du texte du lien correspondant à Netflix */
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles pour le titre "Netflex" */
+  .header li {
+    list-style-type: none;
+    color: #e50914; /* Couleur du texte correspondant à Netflix */
+    font-size: 28px; /* Taille de police du titre */
+    font-weight: bold; /* Gras pour le titre */
+  }
+  
