@@ -8,6 +8,7 @@ body {
   font-family: "Helvetica Neue",Arial, sans-serif;
   background: #141414; /* Couleur d'arrière-plan sombre utilisée par Netflix */
   color: #fff; /* Couleur du texte principale */
+
 }
 
 /* Header */
@@ -155,3 +156,4 @@ select:focus {
 .filters {
   margin-bottom: 20px;
 }
+
