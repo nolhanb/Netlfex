@@ -9,7 +9,9 @@ function Home() {
   const [count, setCount] = useState(1);
   const [selectedGenre, setSelectedGenre] = useState("");
   return (
+    
     <div className="homepage">
+      <div className="Entrance"></div>
       <Header />
       <div className="content">
         <div className="wrapper">
