@@ -8,11 +8,7 @@ import { SearchResultsList } from "../composant/SearchResultsList";
 
 function Détails() {
   const { id } = useParams();
-  console.log(id)
   const [movie, setMovie] = useState(null);
-
-  console.log(movie)
-
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}
@@ -51,7 +47,6 @@ function Détails() {
 
   }
 
-  console.log(movie);
   return (
     <div>
       <Header />
