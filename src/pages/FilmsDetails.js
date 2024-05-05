@@ -6,12 +6,11 @@ import getGenres from "../composant/Gender";
 import ShowDate from "../composant/Date";
 import { SearchResultsList } from "../composant/SearchResultsList";
 
+
 function Détails() {
   const { id } = useParams();
-  console.log(id)
   const [movie, setMovie] = useState(null);
-
-  console.log(movie)
+   const [count, setCount] = useState(1);
 
 
   useEffect(() => {
@@ -51,7 +50,6 @@ function Détails() {
 
   }
 
-  console.log(movie);
   return (
     <div>
       <Header />
