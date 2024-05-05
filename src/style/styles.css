@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +6,13 @@
 
 body {
   font-family: "Helvetica Neue",Arial, sans-serif;
-  background: #141414; 
-  color: #fff;
+  background: #141414; /* Couleur d'arrière-plan sombre utilisée par Netflix */
+  color: #fff; /* Couleur du texte principale */
+
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Pour Chrome, Safari et Opera */
 }
 
 /* Header */
@@ -154,4 +160,3 @@ select:focus {
 .filters {
   margin-bottom: 20px;
 }
-

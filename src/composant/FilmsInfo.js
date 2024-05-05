@@ -4,9 +4,12 @@ import ShowDate from "./Date";
 import { Link } from "react-router-dom";
 import getGenres from "./Gender";
 
+
 function Infos({ page, genres }) {
   const [popularMovies, setPopularMovies] = useState("");
   const [hoveredMovie, setHoveredMovie] = useState({});
+  const [videoUrls, setVideoUrls] = useState({});
+  const [count, setCount] = useState(1);
 
   function handleMouseOver(movieId) {
     setHoveredMovie((prevState) => ({ ...prevState, [movieId]: true }));
@@ -15,12 +18,25 @@ function Infos({ page, genres }) {
     setHoveredMovie((prevState) => ({ ...prevState, [movieId]: false }));
   }
 
-  const url = `https://api.themoviedb.org/3/discover/movie?api_key=197f45d53d5b992d518f4d9e5c9b0f43&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genres}`;
+  const url = `https://api.themoviedb.org/3/discover/movie?api_key=197f45d53d5b992d518f4d9e5c9b0f43&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=${page}&with_genres=${genres}`;
+  
   const getData = async (url) => {
     const rawData = await fetch(url);
     const jsonData = await rawData.json();
     setPopularMovies(jsonData);
+    
+    const videoUrlsMap = {};
+    for (const movie of jsonData.results) {
+      const videoData = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=197f45d53d5b992d518f4d9e5c9b0f43&language=en-US`);
+      const videoJsonData = await videoData.json();
+      if (videoJsonData.results.length > 0) {
+        const key = movie.id;
+        videoUrlsMap[key] = `https://www.youtube.com/watch?v=${videoJsonData.results[0].key}`;
+      }
+    }
+    setVideoUrls(videoUrlsMap);
   };
+  
   useEffect(() => {
     getData(url);
   }, [page, genres]);
@@ -41,6 +57,7 @@ function Infos({ page, genres }) {
               title={movie.title}
               resume={movie.overview}
               genre={getGenres(movie).join(" - ")}
+              videoUrl={videoUrls[movie.id]}
             />
           )}
           <Link to={"/" + movie.id}>
@@ -59,6 +76,6 @@ function Infos({ page, genres }) {
       ))}
     </div>
   );
-
 }
+
 export default Infos;

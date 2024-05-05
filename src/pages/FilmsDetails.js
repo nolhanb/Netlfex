@@ -6,9 +6,12 @@ import getGenres from "../composant/Gender";
 import ShowDate from "../composant/Date";
 import { SearchResultsList } from "../composant/SearchResultsList";
 
+
 function Détails() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
+   const [count, setCount] = useState(1);
+
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}

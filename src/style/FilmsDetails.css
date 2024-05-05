@@ -1,9 +1,11 @@
+/* Upper Block */
 .details .upper-block {
-  background: #000; 
-  color: #fff;
+  background: #000; /* Couleur d'arrière-plan sombre utilisée par Netflix */
+  color: #fff; /* Couleur du texte en blanc pour contraste */
   padding: 30px 0;
 }
 
+/* Middle Block */
 .details .middle {
   display: flex;
   align-items: center;
@@ -11,6 +13,7 @@
   padding: 50px 0;
 }
 
+/* Title and Details */
 .details .title-ul {
   width: 50%;
 }
@@ -50,6 +53,7 @@
   line-height: 1.5;
 }
 
+/* Slider */
 h2.underlined {
   padding: 20px 0;
   text-transform: uppercase;
@@ -57,8 +61,11 @@ h2.underlined {
 
 .slider {
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
+
 }
+
+
 
 .slider-container {
   display: flex;
@@ -77,6 +84,9 @@ h2.underlined {
   transform: scale(1.1);
 }
 
+
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .details .title-ul {
     width: 80%;
