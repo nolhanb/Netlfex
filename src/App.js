@@ -3,7 +3,7 @@ import "./style/styles.css";
 import Détails from "./pages/FilmsDetails";
 import Home from "./pages/Home";
 import { useEffect } from "react";
-import Entrance from "./pages/Entrance"
+import Entrance from "./composant/Movie"
 
 function App() {
 
