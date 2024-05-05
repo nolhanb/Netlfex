@@ -17,25 +17,6 @@ function Home() {
         <div className="wrapper">
           <BarreDeRecherche />
           <div className="filters">
-            <nav className="pagination">
-              <button
-                onClick={() => {
-                  if (count > 1) {
-                    setCount(count - 1);
-                  }
-                }}
-              >
-                Previous
-              </button>
-              {count}
-              <button
-                onClick={() => {
-                  setCount(count + 1);
-                }}
-              >
-                Next
-              </button>
-            </nav>
             <select onChange={(event) => setSelectedGenre(event.target.value)}>
               <option value="all">All Genres</option>
               <option value="28">Action</option>
@@ -60,9 +41,28 @@ function Home() {
             </select>
           </div>
           <Infos page={count} genres={selectedGenre}></Infos>
+
         </div>
       </div>
-
+      <nav className="pagination">
+              <button
+                onClick={() => {
+                  if (count > 1) {
+                    setCount(count - 1);
+                  }
+                }}
+              >
+               <img src="..\assets\moins.png"></img>
+              </button>
+              {count}
+              <button
+                onClick={() => {
+                  setCount(count + 1);
+                }}
+              >
+                Next
+              </button>
+            </nav>
     </div>
 
   );
