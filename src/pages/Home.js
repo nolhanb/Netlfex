@@ -11,10 +11,10 @@ function Home() {
   return (
     
     <div className="homepage">
-      <div className="Entrance"></div>
       <Header />
       <div className="content">
         <div className="wrapper">
+          <div className="top">
           <BarreDeRecherche />
           <div className="filters">
             <select onChange={(event) => setSelectedGenre(event.target.value)}>
@@ -40,6 +40,8 @@ function Home() {
               <option value="37">Western</option>
             </select>
           </div>
+          </div>
+         
           <Infos page={count} genres={selectedGenre}></Infos>
 
         </div>
@@ -52,7 +54,7 @@ function Home() {
                   }
                 }}
               >
-               <img src="..\assets\moins.png"></img>
+               Previous
               </button>
               {count}
               <button
