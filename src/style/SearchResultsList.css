@@ -1,23 +1,28 @@
-/* Style de la liste de résultats */
 .results-list {
-
   background-color: rgb(9, 9, 9);
-  
   display: flex;
   flex-direction: column;
   width: 100%;
- /* box-shadow: 0px 0px 8px #ddd;*/
   border-radius: 5px;
   max-height: 150px;
   overflow-y: scroll;
   color: black;
   list-style: circle;
-  border-radius: 2px;
-
 }
+
 .results-list a {
   color: white;
   text-decoration: none;
+}
+
+.results-list a {
+  color: rgb(242, 238, 238);
+  font-size: 1,2rem;
+  text-decoration: none;
+}
+
+.results-list :hover {
+  color: #e50914;
 }
 
 .results-list a:hover {
@@ -26,27 +31,24 @@
 }
 
 .results-list::-webkit-scrollbar {
-  display: none; /* Pour Chrome, Safari et Opera */
+  display: none;
 }
 
-
-/* Style de la barre de recherche */
 input[type="text"] {
   width: 40%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 2px solid transparent; /* Couleur de bordure transparente */
+  border: 2px solid transparent;
   border-radius: 4px;
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.75); /* Couleur de fond similaire à Netflix */
-  color: white; /* Couleur du texte */
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
   transition: 0.4s ease;
 }
 
-/* Style de la barre de recherche lorsqu'elle est en focus */
 input[type="text"]:focus {
   width: 100%;
-  border-color: #e50914; /* Couleur de bordure rouge similaire à Netflix */
-  outline: none; /* Supprimer le contour de sélection */
+  border-color: #e50914;
+  outline: none;
 }

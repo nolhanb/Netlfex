@@ -6,11 +6,12 @@ import getGenres from "../composant/Gender";
 import ShowDate from "../composant/Date";
 import { SearchResultsList } from "../composant/SearchResultsList";
 
-
 function Détails() {
   const { id } = useParams();
+  console.log(id)
   const [movie, setMovie] = useState(null);
-   const [count, setCount] = useState(1);
+
+  console.log(movie)
 
 
   useEffect(() => {
@@ -50,6 +51,7 @@ function Détails() {
 
   }
 
+  console.log(movie);
   return (
     <div>
       <Header />
@@ -90,7 +92,7 @@ function Détails() {
               <ShowDate date={date}></ShowDate>{" "}
             </li>
             <li>
-              <span className="bold-style">Original Version : </span>{" "}
+              <span className="bold-style">Original language : </span>{" "}
               {language}{" "}
             </li>
             <li>

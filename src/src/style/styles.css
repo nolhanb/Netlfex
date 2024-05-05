@@ -1,46 +1,47 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #141414;
-  color: #fff;
+  font-family: "Helvetica Neue",Arial, sans-serif;
+  background: #141414; /* Couleur d'arrière-plan sombre utilisée par Netflix */
+  color: #fff; /* Couleur du texte principale */
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
+/* Header */
 header {
-  background: #000;
+  background: #000; /* Couleur de l'en-tête de Netflix */
   padding: 20px 0;
 }
 
 .header {
-  background: #141414;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  background: #141414; /* Couleur rouge utilisée par Netflix */
+  padding: 10px; /* Ajout de rembourrage pour l'en-tête */
+  position: fixed; /* Fixer l'en-tête en haut de la page */
+  top: 0; /* Aligner l'en-tête en haut de la page */
+  left: 0; /* Aligner l'en-tête à gauche de la page */
+  width: 100%; /* Occuper toute la largeur de la page */
+  z-index: 1000; /* Assurer que l'en-tête est au-dessus de tout le contenu */
 }
 
+
 .header a {
-  text-decoration: overline;
-  color: #e50914;
+  text-decoration:overline;
+  color:  #e50914; /* Couleur des liens dans l'en-tête */
   font-weight: bold;
   list-style-type: none;
   text-align: left;
   font-size: 35px;
 }
+ 
 
 .header a:hover {
   text-decoration: underline;
 }
 
+/* Content */
 .content {
   max-width: 1400px;
   margin: 0 auto;
@@ -54,7 +55,7 @@ header {
 }
 
 .movie {
-  background: #202020;
+  background: #202020; /* Couleur de fond utilisée pour les films sur Netflix */
   border-radius: 4px;
   overflow: hidden;
   transition: 0.4s ease;
@@ -67,18 +68,20 @@ header {
 .movie-info {
   padding: 10px;
 }
+/* Modifie la couleur des titres des films en blanc */
 
 .movie-info h2 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
+  color: #fff; /* Couleur du texte en blanc */
+  text-decoration: none;
 }
 
 .movie-date {
   font-size: 14px;
   font-weight: 400;
-  color: #999;
+  color: #999; /* Couleur des détails supplémentaires */
 }
 
 .backdrop-img {
@@ -87,6 +90,7 @@ header {
   object-fit: cover;
 }
 
+/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
@@ -100,13 +104,12 @@ header {
   cursor: pointer;
   font-size: 16px;
   margin: 0 5px;
-  color: #fff;
+  color: #fff; /* Couleur des boutons de pagination */
 }
 
 .pagination button:hover {
   text-decoration: underline;
 }
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -115,20 +118,22 @@ select {
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  color: #8a8a8a;
-  background-color: transparent;
+  color: #8a8a8a; /* Couleur du texte dans la liste déroulante */
+  background-color: transparent; /* Fond transparent */
   cursor: pointer;
 }
 
 select:hover {
-  border-color: #fff;
+  border-color: #fff; /* Couleur de la bordure au survol */
 }
 
 select:focus {
-  outline: none;
-  border-color: #fff;
+  outline: none; /* Suppression du focus */
+  border-color: #fff; /* Couleur de la bordure au focus */
 }
 
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -143,9 +148,8 @@ select:focus {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
-
 .movie-info h2:visited {
-  color: #060606;
+  color: #060606; /* Couleur du texte pour les liens visités */
 }
 
 .filters {
